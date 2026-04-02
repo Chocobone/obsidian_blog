@@ -19,35 +19,34 @@ const config: QuartzConfig = {
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
+      theme: {
+      fontOrigin: "local", // 구글 폰트를 받지 않고 기기 기본 폰트 사용 (속도 극대화)
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        body: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+        code: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#ffffff", // 순백색 배경
+          lightgray: "#f0f0f0", // 아주 연한 선
+          gray: "#999999",
+          darkgray: "#111111", // 거의 검은색에 가까운 본문 텍스트
+          dark: "#000000", // 제목
+          secondary: "#cc0000", // kepano 특유의 은은한 붉은/주황색 링크 포인트
+          tertiary: "#ffaaaa",
+          highlight: "rgba(204, 0, 0, 0.05)",
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#111111", // 완전 칠흑보다는 아주 약간 밝은 다크모드 배경
+          lightgray: "#333333",
+          gray: "#777777",
+          darkgray: "#eeeeee", // 눈이 덜 피로한 밝은 회색 텍스트
+          dark: "#ffffff",
+          secondary: "#ff5555", // 다크모드용 붉은색 포인트
+          tertiary: "#aa4444",
+          highlight: "rgba(255, 85, 85, 0.15)",
           textHighlight: "#b3aa0288",
         },
       },

@@ -1,3 +1,44 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* --- kepano 스타일 미니멀리즘 --- */
+
+/* 1. 메인 콘텐츠 폭을 좁게 설정하여 가독성 향상 */
+.center,
+footer {
+  max-width: 650px !important; /* kepano 블로그와 유사한 좁은 폭 */
+  margin: 0 auto;
+}
+
+/* 2. 링크 스타일 (밑줄 강조) */
+a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--lightgray);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration-color: var(--secondary);
+}
+
+/* 3. 사이드바가 차지하던 불필요한 여백 완전히 제거 */
+.page {
+  margin-top: 2rem;
+}
+.sidebar {
+  display: none !important; /* 화면에서 사이드바 영역 자체를 삭제 */
+}
+
+/* 4. 헤더(페이지 타이틀, 검색, 다크모드 등)를 가로로 깔끔하게 배치 */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--lightgray);
+}
